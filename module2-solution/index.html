@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Layout</title>
+<style>
+
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+p {
+
+  width: 100%;
+  font-family: Helvetica;
+  color: black;
+}
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+
+}
+/********** Large devices only **********/
+@media (min-width: 992px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+    border: 1px solid black;
+    background-color: rgb(243, 243, 217);
+    padding: 10px;
+  }
+  .col-lg-4 {
+    width: 32.3%;
+    margin: 0.5%
+  }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+    border: 1px solid black;
+    background-color: rgb(243, 243, 217);
+    padding: 10px;
+    margin-top: 5px;
+  }
+  .col-md-6 {
+    width: 49%;
+    margin: 0.5%
+  }
+  .col-md-12 {
+    width: 99%;
+    margin: 0.5%
+  }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .col-sm-12 {
+  	float: left;
+    width: 99%;
+    margin: 0.5%;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: rgb(243, 243, 217);
+}
+}
+.t-name{
+  overflow: none;
+  width: 100%;
+  text-align: center;
+  border: 1px solid black;
+  width: 100px;
+  padding: 7px;
+  float: right;
+  font-weight: bold;
+  position: relative;
+  margin-right: 3px;
+  margin-top: 3px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+.content{
+  width: 100%;
+  padding-top: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+.name1{
+    background-color: rgb(255, 255, 82);
+}
+.name2{
+    background-color: rgb(243, 138, 138)
+}
+.name3{
+    background-color: rgb(135, 245, 135);
+}
+</style>
+</head>
+<body>
+    
+<h1>This is my page heading</h1>
+
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-12">
+    <p class="t-name name1">Title D1</p>
+  	<p class="content">SCUBA diving is one of the most thrilling and rewarding activities that you can experience. From the opportunity to explore the depths of the ocean to the chance to observe the wonders of the underwater world, SCUBA diving is an exciting and exhilarating experience.</p>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <p class="t-name name2">Title D2</p>
+        <p class="content">SCUBA diving is one of the most thrilling and rewarding activities that you can experience. From the opportunity to explore the depths of the ocean to the chance to observe the wonders of the underwater world, SCUBA diving is an exciting and exhilarating experience.</p>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <p class="t-name name3">Title D3</p>
+            <p class="content">SCUBA diving is one of the most thrilling and rewarding activities that you can experience. From the opportunity to explore the depths of the ocean to the chance to observe the wonders of the underwater world, SCUBA diving is an exciting and exhilarating experience.</p>
+            </div>
+</div>
+
+</body>
+</html>
