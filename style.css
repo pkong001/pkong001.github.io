@@ -1,354 +1,352 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Josefin Sans', sans-serif;
-    box-sizing: border-box;
+/********** Large devices only **********/
+@media (min-width: 1200px) {
 }
 
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+}
+
+
 .hero{
-    height: 100vh; /*%will cover all text but vh will be according to the picture dimention */
+    height: 100%; /*%will cover all text but vh will be according to the picture dimention */
     width: 100%;
-    background-image: url(./cosmic2.jpg);
+    /* background-image: url(./ba.jpg); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./background.jpg);
+    opacity: 0.4;
+    background-color: 20;
+}
+.first-order {
+    position: relative;
+    z-index: 1;
+}
+.hero2{
+    height: 100%; /*%will cover all text but vh will be according to the picture dimention */
+    width: 100%;
+    background-image: url(./bg3.jpg);
     background-size: cover;
     background-position: center;
 }
-.navc{
-    /* background-image: url(./cyan_bg.jpg); */
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background: rgba(255,255,255,0.5);
-    height: 90px;
-}
-nav {
-    display: flex; /*ทำให้เรียงกันตามแนวนอน */
-    align-items: baseline;
-    justify-content: space-between;
-    padding-left: 8%;
-    padding-right: 8%;
-
-}
-nav ul li{
-    list-style-type: none; /*get rid of the bullet*/
-    display: inline-block; /*Make it into block and horizontal inline arrangement */
-    padding: 35px 25px;
-
-}
-nav ul li a {
-    color: brown;
-    text-decoration: none; /*เอาขี้ดเส้นใต้ลิ้งและ decoration อื่นๆ ออก*/
-    font-weight: bold;
-    text-transform: capitalize;
-    font-size:120%
-}
-nav ul li a:hover{ 
-    background-color:blueviolet;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 0px 25px;
-    border-radius: 30px;
-    transition: transform .1s; 
-}
-.btn{
-    background-color:blueviolet;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 10px 25px;
-    border-radius: 30px;
-    transition: transform .1s;
-}
-.btn:hover{
-    transform: scale(1.2);
-
-}
-
-
 .logo{
-    color: maroon;
+    color: #161c2d;
     font-size: 35px;
     letter-spacing: 1px;
     cursor: pointer;
+    margin-top: 0px;
+    margin-left: 100px;
 }
-
-.logo span{
-    color: red;
+.logo a span {
+    color: rgba(0, 0, 0, 0.685);
 }
-.content{
-    position:absolute;
-    top: 37%;
-    left: 10%;
-    color:cyan);
-    text-align: center;
+.logo a {
+    color: black;
+    text-decoration: none;
 }
-
-h1 {
-    color: cyan;
-    margin: 20px 0px 20px;
-    font-size: 75px;
+.navc{
+    background-size: 100%;
+    background: rgba(255,255,255,0.5);
 }
-
-h3{
-    color: cyan;
-    font-size: 25px;
-    margin-bottom: 40px;
-}
-
-h4 {
-    color: cyan;
-    font-size: 20px;
-    letter-spacing: 2px; /*เว้นช่องว่าระหว่างตัวอังษร*/
-}
-
-h5 span {
-    color: red;
-}
-
-
-
-.newslatter form{
-    width: 530px;
-    max-width: 100%;
+#nav-list {
+    margin-top: 0px;
     position: relative;
-    padding-left: 140px;
-
+    left: 0px;
 }
-.newslatter form input:first-child {
-    display: inline-block;
-    width: 100%;
-    padding: 15px 130px 14px 15px;
-    border: 2px solid white;
-    outline: none;
-    border-radius: 30px;
-    background-color: black;
-    color: white;
-}
-
-
-/* Do it in inline style
-.newslatter form input:last-child{
-    position: absolute;
-    display: inline-block;
-    outline: none;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 30px;
-    background-color: black;
-    color: white;
-    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-    top: 6px;
-    right: 6px;
-
-} */
-
-
-
-
-/* ABOUT SECTION */
-
-.about {
-    width: 100%;
-    padding: 100px 0px;
-    background: #101010;
-}
-.about img {
-    height: auto;
-    width: 430px;
-}
-.about-text {
-    width: 550px
-}
-.main {
-    width: 1130px;
-    max-width: 95%;
-    margin: 0 auto;
-    display: flex;
-}
-
-.about-text h2 {
-    color: white;
-    font-size: 75px;
+#nav-list li a {
+    color: #161c2d;
+    text-decoration: none; /*เอาขี้ดเส้นใต้ลิ้งและ decoration อื่นๆ ออก*/
+    font-weight: bold;
     text-transform: capitalize;
-    margin-bottom: 20px;
+    font-size:120%;
+    border-radius: 30px;
 }
-
-.about-text h5 {
-    color: white;
-    letter-spacing: 2px;
-    font-size: 22px;
-    margin-bottom: 25px;
-    text-transform:capitalize;
-}
-.about-text p {
-    color: #fcfc;
-    letter-spacing: 1px;
-    line-height: 28px;
-    font-size: 18px;
-    margin-bottom: 45px;
-}
-
-button {
-    background-color: #f9004d;
-    color: white;
+#nav-list li a:hover {
+    background-color:cyan;
+    color: grey;
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
-    padding: 13px 30px;
+    padding-top: 5px;
     border-radius: 30px;
-    transition: .1s;
+    transition: .3s;
 }
-
-button:hover {
-    background-color: transparent;
-    border: 2px solid #f9004d;
-    cursor: pointer;
+.nav-item{
+    text-align: right;
+    margin-right: 50px;
 }
-
-.project {
-    background: #191919;;
-    width: 100%;
-    padding: 100px 0px;
-}
-.title h2 {
-    color: white;
-    font-size: 75px;
-    width: 100%;
-    margin: 30px auto;
-    text-align: center;
-}
-.box {
+#intro {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: black;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px
+    flex-direction: row;
 }
-.card{
-    height: 365px;
-    width: 335px;
-    padding: 20px 35px;
-    background: #101010;
-    border-radius: 20px;
-    margin: 15px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-}
-.card i {
-    font-size: 50px;
-    display: block;
-    text-align: center;
-    margin: 25px 0px;
-    color: #f9004d;
-}
-
-h5 {
-    color: white;
-    font-size: 23px;
-    margin-bottom: 15px;
-}
-.pra p {
-    color: #fcfc;
-    font-size: 16px;
-    line-height: 27px;
-    margin-bottom: 25px;
-}
-.card .button {
-    background-color: #f9004d;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 13px 30px;
-    border-radius: 30px;
-    transition: .1s;
-}
-.card .button:hover {
-    background-color: transparent;
-    border: 2px solid #f9004d;
-    cursor: pointer;
-}
-.contact-me {
-    width: 100%;
-    height: 290px;
-    background: #101010;
-    display: flex;
-    align-items: center;
-    flex-direction: column; /*แทนที่จะทำให้มันต่อกันแบบ row ให้มาต่อกันข้างล่างใช้คำสั่ง column */
-    justify-content: center;
-}
-.contact-me p {
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 25px;
-}
-.contact-me .button-two {
-    background-color: #f9004d;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 3px 30px;
-    border-radius: 30px;
-    transition: .1s;
-}
-
-.contact-me .button-two:hover {
-    background-color: transparent;
-    border: 2px solid #f9004d;
-    cursor: pointer;
-}
-
 footer {
     position: relative;
     width: 100%;
-    height: 400px;
-    background: #191919;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
 footer p:nth-child(1)  { 
 /* Nth-child is a CSS pseudo-class selector used to select elements based on their position within a parent element. It can be used to select any element that is the nth-child of its parent. For example, the selector "div:nth-child(2)" would select the second div element beneath its parent. */
     font-size: 30px;
-    color: white;
+    color: black;
     margin-bottom: 20p;
     font-weight: bold;
 }
 footer p:nth-child(2) {
-    color: white;
+    color: black;
     font-size: 17px;
     width: 500px;
     text-align: center;
     line-height: 26px; /*ช่องว่างระหว่างบรรทัน*/
 }
-
 .social {
     display: flex;
 }
 .social a {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f9004d;
+    background-color: white;
     border-radius: 50%;
     margin: 10px 10px;
-    color: white;
+    color: black;
     text-decoration: none;
-    font-size: 20px
+    font-size: 20px;
+    border: 2px solid black;
 }
 .social a:hover {
-    transform: scale(1.3);
     transition: .1s;
 }
-.end {
-    position: absolute;
-    color: red;
-    bottom: 35px;
+#copy-right {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.726);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top:10px;
+}
+#copy-right p {
+    color:black;
+    font-size:100%
+}
+#copy-right p:nth-child(2) {
+    padding-top: -20px;
+}
+#copy-right p:nth-child(1) {
+    margin-bottom: 0px;
+}
+
+
+/* <!--About--> */
+
+
+#home-about {
+    text-align: center;
+
+}
+#page-nav {
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+.page-nav-parent {
+    letter-spacing: 2px;
+    color: #161c2d;
+}
+.card-core {
+    margin-top: 30px;
+}
+.card-body {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    min-width: 0;
+    word-wrap: break-word;
+    /* background-color: rgb(192, 8, 8); */
+    background-clip: border-box;
+    border-radius: 10px;
+    box-shadow: -0.0625rem 0 0.625rem 0 rgb(0 0 0 / 7%), 0.3125rem 1.25rem 2.5rem 0 rgb(0 0 0 / 4%) !important;
+}
+#card-inner-bg {
+    border-radius: 20px;
+    padding: 15px 15px 15px 30px;
+}
+.bor-bottom {
+    padding: 0px;
+    border: 0.5px dashed #d4dae1;
+}
+.card-text {
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 30px;
+}
+#about-me-text-box {
+    padding: 20px 0 20px 0;
+}
+.card-skill {
+    border-radius: 10px;
+    padding: 8px 12px 8px 12px;
+    margin-top: 20px;
+}
+.card-skill-detail {
+    border-radius: 10px;
+    margin: 0px;
+    padding: 20px;
+    box-shadow: -0.0625rem 0 0.625rem 0 rgb(0 0 0 / 7%), 0.3125rem 1.25rem 2.5rem 0 rgb(0 0 0 / 4%) !important;
+}
+.read-more-link {
+    color: #343a40;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*  PORTFOLIO SECTION */
+
+.card-port {
+    border-radius: 10px;
+    padding: 8px 12px 8px 12px;
+    margin-top: 20px;
+
+}
+.card-port-detail {
+    border-radius: 10px;
+    margin: 0px;
+    padding: 20px 20px 1px 20px;
+    box-shadow: -0.0625rem 0 0.625rem 0 rgb(0 0 0 / 7%), 0.3125rem 1.25rem 2.5rem 0 rgb(0 0 0 / 4%) !important;
+}
+
+.tab-core {
+    text-align: center;
+}
+.tab-core a {
+    font-size: 13px;
+    padding: 10px;
+    margin: 5px 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    line-height: 34px;
+    transition: all 0.5s ease;
+}
+.tab-core a:hover {
+    color:#01a479 !important;
+    border: 0.5px solid #01a479 !important;
+    transition: .3s;
+}
+.tab {
+    text-decoration: none;
+    margin: 20px;
+    border-radius: 10px !important;
+    border: 1px solid #e9ecef !important;
+    color: #343a40 !important;
+}
+.port-pic {
+    border-radius: 10px;
+    width: 100%;
+}
+.read-more-link p:hover {
+    color:#01a479 !important;
+    transition: .3s;
+}
+.port-calendar {
+    display: flex;
+    justify-content:space-between;
+    color:#343a40;
+}
+.topic {
+    font-weight: bold;
+}
+
+/* Contact Part */
+
+.contact {
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+    color:#343a40;
+    text-decoration: none;
+    /* background-color: aqua; */
+    height: 100%;
+    width: 400px;
+    letter-spacing: 1.2px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.contact-box {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.contact-box a {
+    text-decoration: none;
+}
+
+
+/*  SKILL SECTION */
+.skill-box {
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+    color:#343a40;
+    text-decoration: none;
+    /* background-color: aqua; */
+    height: 100%;
+    width: 650px;
+    letter-spacing: 1.2px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.card-skill {
+    border-radius: 10px;
+    margin: 0px;
+    margin-bottom: 50px;
+    padding: 20px 20px 1px 20px;
+}
+#pic-skill{
+    border-radius: 50%;  
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+.container-skill{
+    width: 500px;
+}
+
+/* COURSEWORK SECTION */
+.card-course-detail {
+    border-radius: 10px;
+    margin: 0px;
+    padding: 20px 20px 20px 20px;
 }

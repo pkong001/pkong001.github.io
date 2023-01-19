@@ -19,9 +19,8 @@
     <title>Hello, world!</title>
 </head>
 <body>
-
-    <div class="hero">
-        <nav class="navbar navbar-expand-lg navbar-light navc first-order"> <!--'''navbar-expand-lg ให้callap ตรงนี้''' -->
+    <div class="hero2 hero-about">
+        <nav class="navbar navbar-expand-lg navbar-light navc"> <!--'''navbar-expand-lg ให้callap ตรงนี้''' -->
             <h2 class="logo"><a href="./index.html">Portfo<span>lio</span></a></h2>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nb" style="margin-right:50px;">
@@ -48,15 +47,50 @@
                 </ul>
             </div>
         </nav>
-        <div class="container text-center first-order">
+
+        <div class="container text-center">
             <div class="row align-items-center" id="intro"> <!-- align-items-center is a vertical alignment-->
-                <div class="profile-pic col-md-12 col-lg-12 col-sm-12">
-                    <img src="./small-pic.png" style="border-radius: 50%;" class="img-fluid" alt="alt text" width="20%" height="auto">
+                <div class="content page-nav-parent">
+                    <h3>PKONG</h3>
+                    <p id="page-nav">HOME  >  ABOUT-ME</p>
                 </div>
-                <div class="col-md-12 col-lg-12 col-sm-12 pt-2">
-                    <h4>Hello, my name is</h4>
-                    <h1>Pongpisut Kongdan</h1>
-                    <h3>I'm a Data Enthusiast, and a Moon</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-text">
+        <h2>Portfolio</h2>
+    </div>
+
+    <div class="tab-core pt-4">
+        <a class="tab col-lg-4 col-md-6 col-12mt-4 col-sm-12">Personal Project</a>
+        <a class="tab col-lg-4 col-md-6 col-12mt-4 col-sm-12">Hobby</a>
+        <a class="tab col-lg-4 col-md-6 col-12mt-4 col-sm-12">Case Studyies</a>
+    </div>
+    <div class="container card-core">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12mt-4 pt-2 card-port ">
+                <div class="card-port-detail">
+                    <a href="#" class="read-more-link text-center">
+                        <img src="./rocket-launch.jpg" class="img-fluid port-pic">
+                        <p class="pt-2">Predict Success Rate of Rocket launch</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12mt-4 pt-2 card-port ">
+                <div class="card-port-detail">
+                    <a href="#" class="read-more-link text-center">
+                        <img src="./churn-rate-a.jpg" class="img-fluid port-pic">
+                        <p class="pt-2">Predict Churn Rate</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12mt-4 pt-2 card-port ">
+                <div class="card-port-detail">
+                    <a href="#" class="read-more-link text-center">
+                        <img src="./rocket-launch.jpg" class="img-fluid port-pic">
+                        <p class="pt-2">Exploratory Data Analysis, Company: Cyclistic</p>
+                    </a>
                 </div>
             </div>
         </div>
