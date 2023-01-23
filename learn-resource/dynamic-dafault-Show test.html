@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+
+
+    <title>Hello, world!</title>
+</head>
+<body>
+  <style>
+    /* hide all tab content by default */
+    .tab-content {
+      display: none;
+    }
+  </style>
+  <div class="tab-core pt-4" id="tabs">
+    <button class="tab-btn active tab col-lg-4 col-md-6 col-12mt-4 col-sm-12" data-tab="all">Personal Project</button>
+    <button class="tab-btn col-lg-4 col-md-6 col-12mt-4 col-sm-12" data-tab="t1">Hobby</button>
+    <button  class="tab-btn col-lg-4 col-md-6 col-12mt-4 col-sm-12" data-tab="t2">Case Studyies</button>
+  </div>
+  <div class="container card-core">
+    <div class="container card-core">
+      <div class="row">
+          <div class="col-lg-4 col-md-6 col-12mt-4 pt-2 card-port tab-content" id="content-1">
+              <div class="card-port-detail">
+                  <a href="#" class="read-more-link text-center">
+                      <img src="./rocket-launch.jpg" class="img-fluid port-pic">
+                      <p class="pt-2">Predict Success Rate of Rocket launch</p>
+                  </a>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12mt-4 pt-2 card-port tab-content" id="content-2">
+              <div class="card-port-detail">
+                  <a href="#" class="read-more-link text-center">
+                      <img src="./churn-rate-a.jpg" class="img-fluid port-pic">
+                      <p class="pt-2">Predict Churn Rate</p>
+                  </a>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12mt-4 pt-2 card-port tab-content" id="content-3">
+              <div class="card-port-detail">
+                  <a href="#" class="read-more-link text-center">
+                      <img src="./rocket-launch.jpg" class="img-fluid port-pic">
+                      <p class="pt-2">Exploratory Data Analysis, Company: Cyclistic</p>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  
+  <script>
+    const tabs = document.querySelector("#tabs");
+    const tabBtns = tabs.querySelectorAll(".tab-btn");
+    const tabContents = {
+      all: ['content-1', 'content-2', 'content-3'],
+      t1: ['content-1'],
+      t2: ['content-2'],
+      t3: ['content-3'],
+    };
+  
+    // Show all tab content by default
+    document.querySelectorAll('.tab-content').forEach(el => el.style.display= 'block');
+  
+  tabBtns.forEach(tabBtn => {
+    tabBtn.addEventListener("click", e => {
+      const tabId = e.target.dataset.tab;
+      // Remove active class from all buttons
+      tabBtns.forEach(btn => btn.classList.remove("active"));
+      // Add active class to the clicked button
+      e.target.classList.add("active");
+      // Hide all tab content
+      document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+      // Show selected tab content
+      tabContents[tabId].forEach(contentId => {
+        document.querySelector(`#${contentId}`).style.display = 'block';
+      });
+    });
+  });
+</script>
+  <!--First, we create an object called tabContents, which has properties for each tab, where each property is an array of the ids of the tab contents that should be displayed for that tab.
+
+Then, we select the main container element for the tabs using document.querySelector("#tabs") and store it in a variable called tabs.
+
+Then, we select all of the tab button elements using tabs.querySelectorAll(".tab-btn") and store them in a variable called tabBtns.
+
+We set the default tab to show all the contents using document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'block');
+
+Then, we loop through all of the tab button elements using tabBtns.forEach(tabBtn => { and for each button, we attach an event listener to it using tabBtn.addEventListener("click", e => {
+When the button is clicked, it will trigger the callback function that we pass to the addEventListener() method.
+The callback function will retrieve the data-tab attribute of the button element that was clicked, and stores it in a variable tabId.
+Then it will use this tabId to access the corresponding array of tab content ids from the tabContents object, and loop through this array using tabContents[tabId].forEach(contentId => {
+then using document.querySelector(#${contentId}).style.display = 'block'; to show the selected tab contents.
+Also, it will remove the class 'active' from all buttons and add the class 'active' to the clicked button
+
+This way, when the user clicks on a tab button, the JavaScript code will hide all of the tab content, and then show the content for the tab that corresponds to the button that was clicked.
+
+Let me know if you have any more questions or if there's anything else I can help you with.-->
+  
+</body>
+</html>
+
+

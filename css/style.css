@@ -1,0 +1,670 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap");
+*   {
+    font-family: "Nunito", sans-serif;
+}
+body {
+    font-size: 16px;
+}
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+}
+
+
+.hero{
+    height: 100%; /*%will cover all text but vh will be according to the picture dimention */
+    width: 100%;
+    /* background-image: url(./ba.jpg); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../pic/background.jpg);
+    opacity: 0.4;
+    background-color: 20;
+}
+.first-order {
+    position: relative;
+    z-index: 1;
+}
+.hero2{
+    height: 100%; /*%will cover all text but vh will be according to the picture dimention */
+    width: 100%;
+    background-image: url(../pic/bg3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.logo{
+    color: #161c2d;
+    font-size: 35px !important;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 0px;
+    margin-left: 100px;
+}
+.logo a span {
+    color: rgba(0, 0, 0, 0.685);
+}
+.logo a {
+    color: black;
+    text-decoration: none;
+}
+.navc{
+    background-size: 100%;
+    background: rgba(255,255,255,0.5);
+}
+#nav-list {
+    margin-top: 0px;
+    position: relative;
+    left: 0px;
+}
+#nav-list li a {
+    color: #161c2d;
+    text-decoration: none; /*เอาขี้ดเส้นใต้ลิ้งและ decoration อื่นๆ ออก*/
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size:120%;
+    border-radius: 30px;
+}
+#nav-list li a:hover, .logo a:hover {
+    color:#01a479 !important;
+    transition: .3s;
+}
+.nav-item{
+    text-align: right;
+    margin-right: 50px;
+}
+#intro {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width: 767px) {
+    #profile-picture {
+        border-radius: 50%;
+        width:40%;
+        height:auto;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    #profile-picture {
+        border-radius: 50%;
+        width:30%;
+        height:auto;
+    }
+}
+@media (min-width: 992px) and (max-width: 3000px) {
+    #profile-picture {
+        border-radius: 50%;
+        width:20%;
+        height:auto;
+    }
+}
+footer {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer p:nth-child(1)  { 
+/* Nth-child is a CSS pseudo-class selector used to select elements based on their position within a parent element. It can be used to select any element that is the nth-child of its parent. For example, the selector "div:nth-child(2)" would select the second div element beneath its parent. */
+    font-size: 30px;
+    color: black;
+    margin-bottom: 20p;
+    font-weight: bold;
+}
+footer p:nth-child(2) {
+    color: black;
+    font-size: 17px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px; /*ช่องว่างระหว่างบรรทัน*/
+}
+.social {
+    display: flex;
+}
+.social a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    margin: 10px 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    border: 2px solid black;
+}
+.social a:hover {
+    transition: .1s;
+}
+#copy-right {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.726);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top:10px;
+}
+#copy-right p {
+    color:black;
+    font-size:100%
+}
+#copy-right p:nth-child(2) {
+    padding-top: -20px;
+}
+#copy-right p:nth-child(1) {
+    margin-bottom: 0px;
+}
+
+
+/* <!--About--> */
+
+
+#home-about {
+    text-align: center;
+
+}
+#page-nav {
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+.page-nav-parent {
+    letter-spacing: 2px;
+    color: #161c2d;
+}
+.card-core {
+    margin-top: 30px;
+}
+.card-body {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    min-width: 0;
+    word-wrap: break-word;
+    /* background-color: rgb(192, 8, 8); */
+    background-clip: border-box;
+    border-radius: 10px;
+    box-shadow: -0.0625rem 0 0.625rem 0 rgb(0 0 0 / 7%), 0.3125rem 1.25rem 2.5rem 0 rgb(0 0 0 / 4%) !important;
+}
+#card-inner-bg {
+    border-radius: 20px;
+    padding: 15px 15px 15px 30px;
+}
+.bor-bottom {
+    padding: 0px;
+    border: 0.5px dashed #d4dae1;
+}
+.card-text {
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 30px;
+}
+#about-me-text-box {
+    padding: 20px 0 20px 0;
+}
+
+.card-skill-detail {
+    border-radius: 10px;
+    margin: 0px;
+    padding: 20px;
+    box-shadow: -0.0625rem 0 0.625rem 0 rgb(0 0 0 / 7%), 0.3125rem 1.25rem 2.5rem 0 rgb(0 0 0 / 4%) !important;
+}
+
+.read-more-link {
+    color: #343a40;
+    font-weight: bold;
+    text-decoration: none;
+}
+.color-per {
+    color:#01a479 !important;
+}
+/*  PORTFOLIO SECTION */
+
+.card-port {
+    border-radius: 10px;
+    padding: 8px 12px 8px 12px;
+    margin-top: 20px;
+
+}
+.card-port-detail {
+    border-radius: 10px;
+    margin: 0px;
+    padding: 20px 20px 1px 20px;
+    box-shadow: -0.0625rem 0 0.625rem 0 rgb(0 0 0 / 7%), 0.3125rem 1.25rem 2.5rem 0 rgb(0 0 0 / 4%) !important;
+}
+
+.tab-core {
+    text-align: center;
+}
+.tab-core button {
+    font-size: 13px;
+    margin: 5px 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    line-height: 34px;
+    transition: all 0.5s ease;
+    width: auto;
+}
+.tab-core button:hover {
+    color:#01a479 !important;
+    border: 0.5px solid #01a479 !important;
+    transition: .3s;
+}
+.tab {
+    text-decoration: none;
+    margin: 20px;
+    border-radius: 10px !important;
+    border: 1px solid #e9ecef !important;
+    color: #343a40 !important;
+}
+.port-pic {
+    border-radius: 6px;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: -0.0625rem 0 0.625rem 0 rgb(0 0 0 / 7%), 0.3125rem 1.25rem 2.5rem 0 rgb(0 0 0 / 4%) !important;
+}
+.read-more-link p:hover,.read-more-link img:hover {
+    color:#01a479 !important; /* god color*/
+    opacity: 50%;
+    transition: .3s;
+}
+.port-calendar {
+    display: flex;
+    justify-content:space-between;
+    color:#343a40;
+}
+.topic {
+    font-weight: bold;
+}
+.active {
+    color:#01a479 !important;
+    border: 0.5px solid #01a479 !important;
+    transition: .3s;
+}
+/* Contact Part */
+
+.contact {
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+    color:#343a40;
+    text-decoration: none;
+    /* background-color: aqua; */
+    height: 100%;
+    width: 400px;
+    letter-spacing: 1.2px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.contact-box {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.contact-box a {
+    text-decoration: none;
+}
+
+
+/*  SKILL SECTION */
+.skill-box {
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+    color:#343a40;
+    text-decoration: none;
+    /* background-color: aqua; */
+    height: 100%;
+    width: 650px;
+    letter-spacing: 1.2px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.card-skill {
+    border-radius: 10px;
+    margin: 0px;
+    margin-bottom: 50px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+}
+#pic-skill{
+    border-radius: 50%;  
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+.container-skill{
+    width: 500px;
+}
+/*Skill section (Further)*/
+.img-text-container {
+    position: relative;
+}
+.skill-text {
+    position: absolute;
+    right: 20%;
+    top: 0%;
+    color:#01a479 !important;
+    background-color: #01a47921;
+    padding-right: 4px;
+    padding-left: 4px;
+    border-radius: 6px; 
+}
+
+
+/* COURSEWORK SECTION */
+.card-course-detail {
+    border-radius: 10px;
+    margin: 0px;
+    padding: 20px 20px 20px 20px;
+}
+.course-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.img-text-container {
+    position: relative;
+}
+.course-text h5{
+    display: block;
+    background-color: rgba(255, 255, 255, 0.555);
+    text-align:center;
+    color: black;
+    font-weight: bold;
+    padding-bottom: 30%;
+    font-size: 150%;
+}
+.read-more-course img:hover {
+    opacity: 50%;
+    transition: .3s;
+    display: block;
+}
+.port-pic {
+    opacity: 1;
+}
+
+  /* When the user hovers over the image container */
+.img-text-container:hover .port-pic {
+    /* Reduce the opacity of the image to 0 (completely hidden) */
+    opacity: 0.2;
+}
+
+/* Set the opacity of the text to 0 (completely hidden) by default */
+.course-text {
+    opacity: 0;
+}
+
+  /* When the user hovers over the image container */
+.img-text-container:hover .course-text {
+    /* Increase the opacity of the text to 1 (fully visible) */
+    opacity: 1;
+}
+
+.port-pic, .course-text {
+  transition: opacity 0.5s ease; /* The transition will take 0.5 seconds and use the 'ease' timing function */
+}
+
+
+
+/* CONTENT SECTION -----------------------------------------------------------------------------------------------------------------*/
+.card-body-content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-clip: border-box;
+}
+.box {
+    border: 1px solid #dee2e6;
+    border-radius: 20px;
+    padding: 20px;
+}
+.content-topics {
+    border-bottom: 1px solid #dee2e6!important;
+}
+.content-topics h6{
+    font-weight:bold;
+}
+
+
+
+/* TIMELINE SECTION ------------------------------------------------------------------------------------------------------------------ */
+.main-timeline:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.main-timeline .timeline {
+width: 80%;
+float: left;
+}
+
+.main-timeline .timeline-content {
+color: #161c2d;
+background: #ffffff;
+padding: 15px 20px 15px 150px;
+margin: 0 0 60px;
+border-radius: 100px 0px 0px;
+display: block;
+position: relative;
+border: 1px dashed #ddd;
+}
+
+.main-timeline .timeline-content:hover {
+text-decoration: none;
+}
+
+.main-timeline .timeline-icon {
+background: #f0f0fe;
+line-height: 100px;
+text-align: center;
+height: 60px;
+width: 60px;
+line-height: 64px;
+border: 7px solid #ffffff;
+border-radius: 50%;
+position: absolute;
+bottom: -42px;
+left: 20px;
+-webkit-box-shadow: 0px 0px 0px 1px #f0f0fe;
+        box-shadow: 0px 0px 0px 1px #f0f0fe;
+}
+
+.main-timeline .title {
+font-size: 20px;
+text-transform: capitalize;
+margin: 0 0 5px;
+}
+
+.main-timeline .description {
+font-size: 14px;
+letter-spacing: 1px;
+margin: 0;
+}
+
+.main-timeline .timeline:nth-child(even) {
+margin: -60px 0 60px;
+float: right;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-content {
+padding: 20px 170px 20px 20px;
+margin: 60px 0 0;
+border-radius: 0 0 100px 0;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-icon {
+left: auto;
+right: 20px;
+bottom: auto;
+top: -42px;
+}
+
+@media screen and (max-width: 767px) {
+.main-timeline .timeline,
+.main-timeline .timeline:nth-child(even) {
+    width: 100%;
+    margin: 0 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.main-timeline .timeline-content,
+.main-timeline .timeline:nth-child(even) .timeline-content {
+    padding: 60px 15px 15px 15px;
+    margin: 40px 0 0;
+    border-radius: 0 0 50px 0;
+}
+.main-timeline .timeline-icon,
+.main-timeline .timeline:nth-child(even) .timeline-icon {
+    font-size: 30px;
+    line-height: 60px;
+    height: 60px;
+    width: 60px;
+    right: 15px;
+    left: auto;
+    top: -40px;
+}
+.skill-badge {
+    top: 30%;
+}
+}
+
+@media screen and (max-width: 567px) {
+.main-timeline .title {
+    font-size: 18px;
+}
+}
+.main-timeline .timeline-content {
+color: #161c2d;
+background: #ffffff;
+padding: 15px 20px 15px 150px;
+margin: 0 0 60px;
+border-radius: 100px 0px 0px;
+display: block;
+position: relative;
+border: 1px dashed #ddd;
+}
+
+.main-timeline .timeline-content:hover {
+text-decoration: none;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content {
+padding: 20px 170px 20px 20px;
+margin: 60px 0 0;
+border-radius: 0 0 100px 0;
+}
+.main-timeline .timeline-content,
+.main-timeline .timeline:nth-child(even) .timeline-content {
+    padding: 60px 15px 15px 15px;
+    margin: 40px 0 0;
+
+}
+.fea.icon-md {
+    height: 26px;
+    width: 26px;
+}
+.feature-widget .fea.icon-md {
+height: 38px;
+width: 38px;
+}
+
+.fea.icon-sm {
+height: 16px;
+width: 16px;
+}
+.badge.badge-pill {
+border-radius: 12px;
+}
+@media screen and (max-width: 767px) {
+.skill-badge {
+    top: 30%;
+}
+}
+.skill-badge {
+    cursor: pointer;
+    width: auto;
+    background-color: rgba(0, 123, 254, 0.08);
+    height: 18px;
+    position: absolute;
+    right: 17%;
+    top: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color:#01a479 !important;
+
+}
+@media (max-width: 320px) and (min-width: 767px) {
+.skill-badge {
+    position: absolute;
+    right: 10px;
+    top: 13px;
+}
+}
+@media (min-width: 767px) and (max-width: 768px) {
+.skill-badge {
+    position: absolute;
+    right: 87px;
+    top: 13px;
+}
+}
+
+.gct {
+    color:rgb(109, 107, 107) !important;
+    letter-spacing: 1px;
+}
+
+.text-light-muted{
+    color:rgb(109, 107, 107) !important;
+
+}
+
+#your-container-id {
+    position: sticky; /* Change to 'sticky' if you want to use it */
+    top: 40%;
+    z-index: 999; /* Give the container a high z-index to ensure it is on top of other elements */
+    width: 90%;
+}
+
+

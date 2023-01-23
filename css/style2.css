@@ -1,0 +1,25 @@
+/* Set the opacity of the image to 1 (fully visible) by default */
+.port-pic {
+    opacity: 1;
+  }
+  
+  /* When the user hovers over the image container */
+  .img-text-container:hover .port-pic {
+    /* Reduce the opacity of the image to 0 (completely hidden) */
+    opacity: 0;
+  }
+  
+/* Set the opacity of the text to 0 (completely hidden) by default */
+.course-text {
+    opacity: 0;
+  }
+  
+  /* When the user hovers over the image container */
+  .img-text-container:hover .course-text {
+    /* Increase the opacity of the text to 1 (fully visible) */
+    opacity: 1;
+  }
+
+  .port-pic, .course-text {
+  transition: opacity 0.5s ease; /* The transition will take 0.5 seconds and use the 'ease' timing function */
+}
