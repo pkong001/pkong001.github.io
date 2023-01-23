@@ -113,7 +113,7 @@ body {
         height:auto;
     }
 }
-@media (min-width: 992px) and (max-width: 3000px) {
+@media (min-width: 992px) and (max-width: 9000px) {
     #profile-picture {
         border-radius: 50%;
         width:20%;
