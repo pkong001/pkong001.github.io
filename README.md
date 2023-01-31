@@ -1,7 +1,3 @@
+# Hi, My name is Pongpisut Kongdan, and this is my website repository
+
 # pkong001.github.io
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
